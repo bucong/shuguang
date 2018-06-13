@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link href="../../lib/font/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+<div class="login contain">
+    <h1>欢迎您</h1>
+    <ul>
+        <li>
+            <span class="iconfont">&#xe656;</span>
+            <div class="area">
+                <span>+86</span><span>中国</span>
+            </div>
+        </li>
+        <li>
+            <span class="iconfont">&#xe625;</span>
+            <input type="text" name="phone" class="phone" placeholder="请输入手机号"/>
+            <button class="get-code">获取验证码</button>
+        </li>
+        <li>
+            <span class="iconfont">&#xe627;</span>
+            <input type="text" name="validCode" class="code" placeholder="请输入收到的验证码"/>
+        </li>
+    </ul>
+    <div class="agree">
+        <div class="btn">
+            <i class="iconfont yes">&#xe61f;</i>
+            <i class="iconfont no">&#xe622;</i>
+            <span>已阅读并同意</span>
+        </div>
+        <div><a href="javascript:;">《曙光筹隐私政策》</a></div>
+    </div>
+    <button class="sub-btn">登录</button>
+    <div class="meng agreement">
+			<div class="meng-box">
+				<h4>请认真阅读以下协议</h4>
+				<div class="content">
+					请认真阅读以下协议请认真阅读以下协议请认真阅读以下协议请认真阅读以下协议请认真阅读以下协议请认真阅读以下协议请认真阅读以下协议请认真阅读以下协议
+				</div>
+				<button>确认</button>
+			</div>
+		</div>
+</div>
+</body>
+<script>
+    $('.agree .btn').toggle(function () {
+        //不同意协议
+        $('.agree .btn .yes').hide();
+        $('.agree .btn .no').show();
+    }, function () {
+        //同意协议
+        $('.agree .btn .yes').show();
+        $('.agree .btn .no').hide();
+    });
+    $('.agree a').click(function(){
+			$('.agreement').show();
+		})
+		$('.agreement button').click(function(){
+			$('.agreement').hide();
+		})
+</script>
+</html>

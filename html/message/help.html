@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>收到的帮助</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link href="../../lib/font/iconfont.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<script src="../../js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="message-help contain">
+    <ul>
+    	<li>
+		    <div class="left imgbg" style="background-image: url(../../images/doctor3.png)"></div>
+		    <div class="right">
+		      <div class="title"><span class="name">蜡笔小新</span>帮助您的项目<span class="mount">12.00</span>元</div>
+		      <div class="desc">加油，一定会好起来的！</div>
+		      <div class="time">2017-11-30 19:22</div>
+		      <span class="iconfont comment-open">&#xe61a;</span>
+		    </div>
+		  </li>
+    </ul>
+    <div class="noresult">
+      <img src="../../images/nohelp.png">
+      <p>您还没有收到帮助</p>
+    </div>
+ 	</div>
+ 	<div class="meng comment-box">
+	 	<div class="meng-box">
+	 		<textarea name="" class="text-input" id="" placeholder="回复"></textarea>
+	    <div class="flex">
+	      <button class="button cancel" type="button">取消</button>
+	      <button class="button sub" disabled type="button">发送</button>
+	    </div>
+	 	</div>
+	</div>
+</body>
+<script>
+  $('.comment-box .sub').click(function(){
+		//提交评论
+		alert('发送的内容是：'+$('.comment-box textarea').val());
+	})
+</script>
+</html>

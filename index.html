@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>首页</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="lib/mui/mui.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<link href="lib/font/iconfont.css" rel="stylesheet">
+	<link rel="stylesheet" href="lib/toast/dialog.css" />
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="lib/mui/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="lib/toast/dialog.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="index contain">
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/banner1@2x.png">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/banner1@2x.png">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/banner1@2x.png">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/banner1@2x.png">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/banner1@2x.png">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<div class="title">
+			<h2>特别关注</h2>
+		</div>
+		<section class="foundation-list">
+			<a href="html/foundation/foundation.html" class="list-item">
+				<div class="pic" style="background-image: url(images/banner1.png)"></div>
+        <div class="content">
+          <h3>胆道闭锁</h3>
+          <div class="outline">胆道闭锁</div>
+          <ul class="label">
+            <li>医疗</li>
+            <li>儿童</li>
+          </ul>
+        </div>
+			</a>
+		</section>
+	</div>
+	<nav>
+		<ul class="flex">
+			<li class="active">
+				<a href="#">
+					<span class="iconfont">&#xe63d;</span>
+          <p class="name" >首页</p>
+				</a>
+			</li>
+			<li>
+				<a href="html/foundation/list.html">
+					<span class="iconfont">&#xe63b;</span>
+          <p class="name" >公募项目</p>
+				</a>
+			</li>
+			<li>
+				<a href="html/project/create.html" class="create">
+					<span class="iconfont">&#xe659;</span>
+				</a>
+			</li>
+			<li>
+				<a href="html/message/nav.html">
+					<span class="iconfont">&#xe63e;</span>
+          <p class="name" >消息</p>
+				</a>
+			</li>
+			<li>
+				<a href="html/person/person.html">
+					<span class="iconfont">&#xe63c;</span>
+          <p class="name" >个人</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</body>
+<script>
+	var gallery = mui('.mui-slider');
+	gallery.slider({
+	  interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+	});
+</script>
+</html>

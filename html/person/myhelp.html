@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>我的帮助</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link href="../../lib/font/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="myhelp contain">
+    <div class="help-outline">
+      <div class="outline-item">
+        <div class="num">34214</div>
+        <div class="name">总金额</div>
+      </div>
+      <div class="separate"></div>
+      <div class="outline-item">
+        <div class="num">21</div>
+        <div class="name">帮助次数</div>
+      </div>
+      <div class="separate"></div>
+      <div class="outline-item">
+        <div class="num">55</div>
+        <div class="name">曙光值</div>
+      </div>
+    </div>
+    <div class="flex tab-bar">
+      <div class="active">
+        <h5>公募项目</h5>
+      </div>
+      <div>
+        <h5>个人项目</h5>
+      </div>
+    </div>
+    <div class="classify">
+      <div class="classify-list" style="display: block;">
+        <div class="helped-wrapper">
+          <div class="helped-item">
+				    <div class="content">
+				      <h2>帮助胆道闭锁患儿</h2>
+				      <ul class="info">
+				        <li>
+				          <div class="left">帮助金额</div>
+				          <div class="right money">10元</div>
+				        </li>
+				        <li>
+				          <div class="left">交易ID</div>
+				          <div class="right trade-id">5b56***8842</div>
+				        </li>
+				        <li>
+				          <div class="left">交易日期</div>
+				          <div class="right date">2017-11-23 19:38</div>
+				        </li>
+				      </ul>
+				    </div>
+				    <div class="pic imgbg" style="background-image:url(../../images/banner1@2x.png)">
+				      <span>胆道闭锁</span>
+				    </div>
+				  </div>
+        </div>
+        <div class="no-help">您暂未帮助过公募项目</div>
+      </div>
+      <div class="classify-list">
+        <div class="helped-wrapper">
+          <div class="helped-item">
+				    <div class="content">
+				      <h2>贫苦家庭雪上加霜，肝癌女儿…</h2>
+				      <ul class="info">
+				        <li>
+				          <div class="left">帮助金额</div>
+				          <div class="right money">10元</div>
+				        </li>
+				        <li>
+				          <div class="left">交易ID</div>
+				          <div class="right trade-id">5b56***8842</div>
+				        </li>
+				        <li>
+				          <div class="left">交易日期</div>
+				          <div class="right date">2017-11-23 19:38</div>
+				        </li>
+				      </ul>
+				    </div>
+				    <div class="pic imgbg" style="background-image:url(../../images/banner1@2x.png)">
+				      <span>胆道闭锁</span>
+				    </div>
+				  </div>
+        </div>
+        <div class="no-help">您暂未帮助过个人项目</div>
+      </div>
+    </div>
+	</div>
+</body>
+<script>
+    $('.myhelp .tab-bar div').click(function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    	$('.classify .classify-list').eq($(this).index()).show().siblings().hide();
+    })
+</script>
+</html>

@@ -1,0 +1,110 @@
+@import 'variable';
+.login{
+    padding: .6rem .4rem;
+    h1{
+        font-size: .56rem;
+        font-family: PingFangSC-Medium;
+        color: #333;
+        line-height: .78rem;
+        margin-bottom: .4rem;
+    }
+    ul{
+        li{
+            display: flex;
+            align-items: center;
+            height: 1.2rem;
+            border-bottom: $border;
+        }
+        .area{
+            font-size: .3rem;
+            color: #333;
+            span{
+                margin-right: .2rem;
+            }
+        }
+        .iconfont{
+            font-size: .34rem;
+            color: #d8d8d8;
+            margin-right: .3rem;
+        }
+        input{
+            line-height: 1rem;
+            border: none;
+            margin-bottom: 0;
+            font-size: .3rem;
+            padding: 0;
+            width: 4.2rem;
+        }
+        input::-webkit-input-placeholder{
+            color: #999;
+        }
+        .get-code{
+            width: 1.8rem;
+            height: .6rem;
+            color: #fff;
+            background:$btnbg;
+            border-radius: .04rem;
+            border: none;
+            font-size: .26rem;
+        }
+    }
+    .agree{
+        display: flex;
+        align-items: center;
+        height: .4rem;
+        margin-top: .3rem;
+        .btn{
+            color: #878787;
+            font-size: .26rem;
+        }
+        i{
+            font-size: .26rem;
+            margin-right: .06rem;
+        }
+        .yes{
+            color: #ffdd00;
+        }
+        .no{
+            color: rgba(0,0,0,.1);
+            display: none;
+        }
+        a{
+            font-size: .26rem;
+            color: #FED80A;
+        }
+    }
+    .sub-btn{
+        height: .88rem;
+        width: 100%;
+        background:$btnbg;
+        border-radius: .04rem;
+        border: none;
+        font-size: .3rem;
+        color: #333;
+        margin-top: .6rem;
+    }
+    .agreement{
+        .meng-box{
+            width: 6rem;
+            height: 4.2rem;
+            text-align: center;
+            padding: .6rem .3rem;
+            h4{
+                font-size: .4rem;
+                margin-bottom: .4rem;
+            }
+            div{
+                padding-bottom: 1rem;
+                font-size: .28rem;
+                text-align: left;
+                text-indent: 2em;
+                line-height: .48rem;
+            }
+            button{
+                width: 100%;
+                border: none;
+                background: #fff;
+            }
+        }
+    }
+}

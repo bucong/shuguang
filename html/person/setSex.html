@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link href="../../lib/font/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+ 	<div class="contain settings">
+ 		<h2>修改性别</h2>
+ 		<ul class="sex-box">
+ 			<li class="flex active">
+ 				<div class="sex">
+ 					<i class="iconfont">&#xe629;</i>
+	 				<span>男</span>
+ 				</div>
+	 			<div>
+	 				<i class="iconfont no-choose">&#xe622;</i>
+	 				<i class="iconfont choose">&#xe61f;</i>
+	 			</div>	
+ 			</li>
+ 			<li class="flex">
+ 				<div class="sex">
+ 					<i class="iconfont">&#xe62a;</i>
+	 				<span>女</span>
+ 				</div>
+	 			<div>
+	 				<i class="iconfont no-choose">&#xe622;</i>
+	 				<i class="iconfont choose">&#xe61f;</i>
+	 			</div>	
+ 			</li>
+ 		</ul>
+ 		<p>性别一年内只能修改一次，请谨慎修改</p>
+ 		<button>确定</button>
+ 	</div>
+</body>
+<script>
+		let sex = '男';
+    $('.sex-box li').click(function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    	//索引值：0为男，1为女
+    	if($(this).index()===0){
+    		sex = '男';
+    	}else{
+    		sex = '女';
+    	}
+    	console.log(sex);
+    })
+</script>
+</html>

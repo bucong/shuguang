@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>爱心帮助</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link href="../../lib/font/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+	<div class="pay contain">
+	  <div class="flex money">
+	  	<span>帮助金额</span>
+	  	<input type="number" name="" id="" value="" placeholder="请输入帮助金额" />
+	  	<span>元</span>
+	  </div>
+	  <div class="encourage">
+	  	<textarea name="" rows="" cols="" maxlength="40" placeholder="请说一句话给予受助人最大的鼓励吧！"></textarea>
+	  	<div><span>22</span>/40</div>
+	  </div>
+	  <div class="flex options">
+	  	<div class="flex">
+	  		<i class="iconfont no-choose">&#xe622;</i>
+	 			<i class="iconfont choose">&#xe61f;</i>
+	  		<span>匿名帮助</span>
+	  	</div>
+	  	<span>本次帮助将提升 <span class="num">10</span> 曙光值</span>
+	  </div>
+	  <h2>选择支付方式</h2>
+	  <ul class="pay-type">
+	  	<li class="flex active">
+	  		<div class="flex">
+	  			<i class="iconfont wx">&#xe61d;</i>
+	  			<span>微信支付</span>
+	  		</div>
+	  		<div>
+	  			<i class="iconfont no-choose">&#xe622;</i>
+	 				<i class="iconfont choose">&#xe61f;</i>
+	  		</div>
+	  	</li>
+	  	<li class="flex">
+	  		<div class="flex">
+	  			<i class="iconfont zfb">&#xe61e;</i>
+	  			<span>支付宝支付</span>
+	  		</div>
+	  		<div>
+	  			<i class="iconfont no-choose">&#xe622;</i>
+	 				<i class="iconfont choose">&#xe61f;</i>
+	  		</div>
+	  	</li>
+	  </ul>
+	</div>
+  <div class="pay-bottom flex">
+  	<div>合计： <span>5</span> 元</div>
+  	<button>确认支付</button>
+  </div>
+</body>
+<script>
+	//输入金额
+	$('.money input').bind('input propertychange', function() { 
+		let val = FormatMoney($(this).val());
+		$(this).val(val);
+		$('.pay-bottom span').html(val);
+		$('.options .num').html((val*10).toFixed(0));
+	})
+	//输入鼓励的话
+	$('.encourage textarea').bind('input propertychange', function() {
+		$('.encourage span').html($(this).val().length);
+	})
+	//匿名帮助
+	let anonymous = true;
+	$('.pay .options .flex').toggle(function(){
+		//不匿名
+		anonymous = false;
+		$('.pay .options .no-choose').show();
+		$('.pay .options .choose').hide();
+	},function(){
+		//匿名
+		anonymous = true;
+		$('.pay .options .no-choose').hide();
+		$('.pay .options .choose').show();
+	})
+	//选择支付方式
+  let payType = 'wx';
+  $('.pay-type li').click(function(){
+  	$(this).addClass('active').siblings().removeClass('active');
+  	//索引值：0为微信，1为支付宝
+  	if($(this).index()===0){
+  		payType = 'wx';
+  	}else{
+  		payType = 'zfb';
+  	}
+  	console.log(payType);
+  })
+  //发起付款
+  $('.pay-bottom button').click(function(){
+  	//付款方式： payType;是否匿名：anonymous
+  	window.location.href='payComplete.html';
+  })
+</script>
+</html>
